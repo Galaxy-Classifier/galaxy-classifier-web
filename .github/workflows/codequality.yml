@@ -1,9 +1,9 @@
-name: Node.js CI
+name: Codequality
 
 on: [push, pull_request]
 
 jobs:
-  build:
+  codequality:
 
     runs-on: ubuntu-latest
 
