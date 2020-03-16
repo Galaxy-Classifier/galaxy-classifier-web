@@ -3,7 +3,7 @@ name: Codequality
 on: [push, pull_request]
 
 jobs:
-  codequality:
+  lint:
 
     runs-on: ubuntu-latest
 
