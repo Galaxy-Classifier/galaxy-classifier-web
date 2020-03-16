@@ -4,14 +4,22 @@ import {
   Switch,
   Route
 } from 'react-router-dom';
+import About from './components/About';
+import GalaxyInfo from './components/GalaxyInfo';
 import Home from './components/Home';
 
 export default function App() {
   return (
     <Router>
       <Switch>
-        <Route path='/'>
+        <Route exact path='/'>
           <Home />
+        </Route>
+        <Route path='/about'>
+          <About />
+        </Route>
+        <Route path='/galaxy-info'>
+          <GalaxyInfo />
         </Route>
       </Switch>
     </Router>

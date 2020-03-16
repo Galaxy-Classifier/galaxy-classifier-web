@@ -1,4 +1,6 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+import Link from '../components/Link';
 import '../styles/layout.css';
 
 
@@ -6,15 +8,23 @@ export default function Layout({ children }) {
   return (
     <>
       <header>
-        <nav>
-          <h1>SISTEMA CLASIFICADOR DE GALAXIAS</h1>
+        <nav className="NavElements">
+          <h1 className="NavTitle">SISTEMA CLASIFICADOR DE GALAXIAS</h1>
+          <section className="NavButtons">
+            <Link to='/galaxy-info' label='SOBRE LAS GALAXIAS' />
+            <Link to='/about' label='NOSOTROS' />
+          </section>
         </nav>
-        <section>
+        <section className="InstitutionalImagesContainer">
         </section>
       </header>
-      <div>
+      <div className="Container">
         {children}
       </div>
     </>
-  )
+  );
 }
+
+Layout.propTypes = {
+  children: PropTypes.node,
+};
