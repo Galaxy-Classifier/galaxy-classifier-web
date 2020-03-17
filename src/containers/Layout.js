@@ -11,8 +11,8 @@ export default function Layout({ children }) {
         <nav className="NavElements">
           <h1 className="NavTitle">SISTEMA CLASIFICADOR DE GALAXIAS</h1>
           <section className="NavButtons">
-            <Link to='/galaxy-info' label='SOBRE LAS GALAXIAS' />
-            <Link to='/about' label='NOSOTROS' />
+            <Link styles='NavSpace' to='/galaxy-info' label='SOBRE LAS GALAXIAS' />
+            <Link styles='NavSpace' to='/about' label='NOSOTROS' />
           </section>
         </nav>
         <section className="InstitutionalImagesContainer">
