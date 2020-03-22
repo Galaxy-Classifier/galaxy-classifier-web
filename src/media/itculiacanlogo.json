@@ -1,0 +1,11 @@
+{
+    "webpS": "https://galaxyclassifier.s3-us-west-1.amazonaws.com/logos/itculiacan/itculiacan-550_x_550.webp",
+    "webpXS": "https://galaxyclassifier.s3-us-west-1.amazonaws.com/logos/itculiacan/itculiacan-450_x_450.webp",
+    "webpM": "https://galaxyclassifier.s3-us-west-1.amazonaws.com/logos/itculiacan/itculiacan-650_x_650.webp",
+    "webpL": "https://galaxyclassifier.s3-us-west-1.amazonaws.com/logos/itculiacan/itculiacan-750_x_750.webp",
+    "pngS": "https://galaxyclassifier.s3-us-west-1.amazonaws.com/logos/itculiacan/itculiacan-550_x_550.png",
+    "pngXS": "https://galaxyclassifier.s3-us-west-1.amazonaws.com/logos/itculiacan/itculiacan-450_x_450.png",
+    "pngM": "https://galaxyclassifier.s3-us-west-1.amazonaws.com/logos/itculiacan/itculiacan-650_x_650.png",
+    "pngL": "https://galaxyclassifier.s3-us-west-1.amazonaws.com/logos/itculiacan/itculiacan-750_x_750.png",
+    "alt": "Logo del Instituto Tecnológico de Culiacán"
+}

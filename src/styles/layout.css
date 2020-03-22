@@ -1,0 +1,27 @@
+.Container {
+  height: 80%;
+}
+
+.NavTitle {
+  color: white;
+  margin-left: 1em;
+}
+
+.NavElements {
+  display: flex;
+  height: 3.5em;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.NavButtons {
+  margin-right: 2em;
+  display: flex;
+}
+
+.InstitutionalImagesContainer {
+  display: flex;
+  height: 4em;
+  align-items: center;
+  background-color: #EFEFEF;
+}
