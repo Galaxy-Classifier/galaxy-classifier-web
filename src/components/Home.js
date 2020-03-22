@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <Layout>
       <div>
-        Hello! Im the home component.
+        
       </div>
     </Layout>
   );

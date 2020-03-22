@@ -1,0 +1,11 @@
+{
+    "webpS": "https://galaxyclassifier.s3-us-west-1.amazonaws.com/logos/sep/sep-550_x_110.webp",
+    "webpXS": "https://galaxyclassifier.s3-us-west-1.amazonaws.com/logos/sep/sep-450_x_90.webp",
+    "webpM": "https://galaxyclassifier.s3-us-west-1.amazonaws.com/logos/sep/sep-650_x_130.webp",
+    "webpL": "https://galaxyclassifier.s3-us-west-1.amazonaws.com/logos/sep/sep-750_x_150.webp",
+    "pngS": "https://galaxyclassifier.s3-us-west-1.amazonaws.com/logos/sep/sep-550_x_110.png",
+    "pngXS": "https://galaxyclassifier.s3-us-west-1.amazonaws.com/logos/sep/sep-450_x_90.png",
+    "pngM": "https://galaxyclassifier.s3-us-west-1.amazonaws.com/logos/sep/sep-650_x_130.png",
+    "pngL": "https://galaxyclassifier.s3-us-west-1.amazonaws.com/logos/sep/sep-750_x_150.png",
+    "alt": "Logo de la Secretaría de Educación Pública del Gobierno de México"
+}

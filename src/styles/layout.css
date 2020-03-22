@@ -4,22 +4,24 @@
 
 .NavTitle {
   color: white;
-  margin-left: 10px;
+  margin-left: 1em;
 }
 
 .NavElements {
   display: flex;
+  height: 3.5em;
   justify-content: space-between;
   align-items: center;
-  flex: 0.5;
 }
 
 .NavButtons {
-  margin-right: 20px;
+  margin-right: 2em;
   display: flex;
 }
 
 .InstitutionalImagesContainer {
+  display: flex;
+  height: 4em;
+  align-items: center;
   background-color: #EFEFEF;
-  flex: 0.5;
 }
