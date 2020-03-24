@@ -7,9 +7,7 @@ export default function CustomLink(props) {
   const { to, label, styles } = props;
   const cssClasses = `BaseLink ${styles}`;
   return (
-    <a className={cssClasses} >
-      <Link to={to}>{label}</Link>
-    </a>
+    <Link className={cssClasses} to={to}>{label}</Link>
   );
 }
 

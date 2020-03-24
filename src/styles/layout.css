@@ -1,6 +1,7 @@
 .Container {
-  height: 80%;
-}
+  display: flex;
+  height: 82vh
+;}
 
 .NavTitle {
   color: white;
@@ -9,7 +10,7 @@
 
 .NavElements {
   display: flex;
-  height: 3.5em;
+  height: 8vh;
   justify-content: space-between;
   align-items: center;
 }
@@ -21,7 +22,7 @@
 
 .InstitutionalImagesContainer {
   display: flex;
-  height: 4em;
+  height: 10vh;
   align-items: center;
   background-color: #EFEFEF;
 }

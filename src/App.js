@@ -6,7 +6,7 @@ import {
 } from 'react-router-dom';
 import About from './components/About';
 import GalaxyInfo from './components/GalaxyInfo';
-import Home from './components/Home';
+import Home from './containers/Home';
 
 export default function App() {
   return (
