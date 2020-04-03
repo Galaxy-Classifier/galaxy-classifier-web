@@ -16,3 +16,11 @@ a, label, h1 { margin: 0; font-family: 'Montserrat', sans-serif; }
 label { font-weight: bold; font-size: 1em; }
 input { border: none; background: transparent; outline: 0; margin-top: 10px; }
 p { margin: 0; font-family: 'Open Sans', sans-serif; }
+
+.BaseButton {
+  background-color: #1A237E;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
