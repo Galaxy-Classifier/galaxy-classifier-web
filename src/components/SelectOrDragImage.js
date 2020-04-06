@@ -1,51 +1,92 @@
 import React, { useState } from 'react';
+import PropTypes from 'prop-types';
 
-const onDragEnter = () => document.getElementById('Draggeable').classList.add('highlight');
-const onDragOver = () => document.getElementById('Draggeable').classList.add('highlight');
-const onDragLeave = () => document.getElementById('Draggeable').classList.remove('highlight');
-
-function onDrop(event) {
-  document.getElementById('Draggeable').classList.remove('highlight');
-  handleFiles(event);
-}
+const acceptedTypes = ['image/png', 'image/jpg', 'image/jpeg'];
 
 function preventDefaults(event) {
   event.preventDefault();
   event.stopPropagation();
 }
 
-function executor(event, handler, hookChange) {
+function addHighlight(event) {
   preventDefaults(event);
-  if (hookChange) hookChange(true);
-  return handler(event);
+  document.getElementById('Draggeable').classList.add('highlight');
 }
 
-function handleFiles(event) {
-  const { dataTransfer, target } = event;
-  const files = (dataTransfer && dataTransfer.files) || (target && target.files);
-  console.log(files);
+function removeHighlight(event) {
+  preventDefaults(event);
+  document.getElementById('Draggeable').classList.remove('highlight');
 }
 
-export default function SelectOrDragImage() {
-  const [droppedImages, setDropped] = useState(false);
-  let message = 'Arrastre o seleccione hasta tres imágenes.';
-  if (droppedImages) message = 'Revise sus imágenes antes de continuar.';
+function getDraggedImages(event, setSelectedImage, setNotCompliantImages, setImages) {
+  removeHighlight(event);
+  const { dataTransfer: { files } } = event;
+  const compliant = checkFilesCompliance(files);
+
+  if (compliant) {
+    setSelectedImage(true);
+    setImages(compliant);
+  } else {
+    setNotCompliantImages(true);
+  }
+}
+
+function getFileExplorerImages(event, setSelectedImage, setNotCompliantImages, setImages) {
+  const { target: { files } } = event;
+  const compliant = checkFilesCompliance(files);
+
+  if (compliant) {
+    setSelectedImage(true);
+    setImages(compliant);
+  } else {
+    setNotCompliantImages(true);
+  }
+}
+
+function checkFilesCompliance(files) {
+  const filesAsArray = Array.from(files).slice(0, 3);
+
+  if (filesAsArray.length < 3) {
+    return false;
+  }
+
+  const notCompliantElement = filesAsArray.map(item => item.type).find(type => !acceptedTypes.includes(type));
+  if (notCompliantElement) return false;
+
+  return filesAsArray;
+}
+
+const renderImages = (images) => images.map(image => (<img key={image.lastModified} className='SelectedImage' src={window.URL.createObjectURL(image)} />))
+
+export default function SelectOrDragImage(props) {
   return (
     <div
-      onDragEnter={(event) => executor(event, onDragEnter)}
-      onDragLeave={(event) => executor(event, onDragLeave)}
-      onDragOver={(event) => executor(event, onDragOver)}
-      onDrop={(event) => executor(event, onDrop, setDropped)}
+      onDragEnter={(event) => addHighlight(event)}
+      onDragLeave={(event) => removeHighlight(event)}
+      onDragOver={(event) => addHighlight(event)}
+      onDrop={(event) => getDraggedImages(event, props.setSelectedImages, props.setNotCompliantImages, props.setImages)}
       className="SelectedImageContainer"
       id="Draggeable"
     >
-      <form className="SelectImageForm">
-        <label>{message}</label>
-        <input onChange={(event) => handleFiles(event)} multiple type="file" accept="image/png, image/jpeg, image/jpg"/>
-        <img />
-        <img />
-        <img />
+      <form id="SelectImageForm" className="SelectImageForm">
+        <label>{props.containerMessage}</label>
+        <input 
+          onChange={(event) => getFileExplorerImages(event, props.setSelectedImages, props.setNotCompliantImages, props.setImages)} 
+          multiple 
+          type="file" 
+          accept="image/png, image/jpeg, image/jpg"
+        />
       </form>
+      { props.images.length ? 
+        <div className="animated fadeIn SelectedImagesContainer">{renderImages(props.images)}</div> : 
+        null 
+      }
     </div>
   );
 }
+
+SelectOrDragImage.propTypes = {
+  shouldClearImages: PropTypes.bool,
+  resetClearImages: PropTypes.func,
+  fileManager: PropTypes.func,
+};
