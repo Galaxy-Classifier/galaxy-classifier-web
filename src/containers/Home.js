@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Layout from './Layout';
 import SelectOrDragImage from '../components/SelectOrDragImage';
+import NotAcceptedImagesModal from '../components/NotAcceptedImages';
 import '../styles/home.css';
 import { initialMessage, selectImagesMessage, selectedImagesMessage } from '../media/strings.json';
 
@@ -51,8 +52,12 @@ export default function Home() {
           </article>
         </section>
       </div>
-      { shouldOpenTermsAndConditions ? <div>Terms and conditions</div> : null }
-      { shouldDisplayNotCompliantImages ? <div>Images not compliant</div> : null }
+      { shouldOpenTermsAndConditions ? 
+        <div>Terms and conditions modal!</div> : 
+        null }
+      { shouldDisplayNotCompliantImages ? 
+        <NotAcceptedImagesModal closeModal={setNotCompliantImages} /> : 
+        null }
     </Layout>
   );
 }
