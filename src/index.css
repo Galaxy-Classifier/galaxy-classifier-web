@@ -4,6 +4,7 @@ header {
   background-color: lime;
   display: flex;
   flex-direction: column;
+}
 
 nav {
   background-color: #1A237E;
