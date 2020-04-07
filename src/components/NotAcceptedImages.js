@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Modal from './Modal';
 
 export default function NotAcceptedImagesModal(props) {
@@ -9,10 +10,14 @@ export default function NotAcceptedImagesModal(props) {
         <p style={{marginLeft: '10px'}}>Elija otras imágenes, recuerde que los formatos válidos son png, jpg y jpeg.</p>
       </section>
       <section className='NotAcceptedImagesButtons'>
-        <button className="BaseButton NotAcceptedImageButton" onClick={(event) => props.closeModal(false)}>
+        <button className="BaseButton NotAcceptedImageButton" onClick={() => props.closeModal(false)}>
           CONTINUAR
         </button>
       </section>
     </Modal>
   );
 }
+
+NotAcceptedImagesModal.propTypes = {
+  closeModal: PropTypes.func,
+};

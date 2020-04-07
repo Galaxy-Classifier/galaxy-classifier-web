@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 
 const acceptedTypes = ['image/png', 'image/jpg', 'image/jpeg'];
@@ -56,7 +56,7 @@ function checkFilesCompliance(files) {
   return filesAsArray;
 }
 
-const renderImages = (images) => images.map(image => (<img key={image.lastModified} className='SelectedImage' src={window.URL.createObjectURL(image)} />))
+const renderImages = (images) => images.map(image => (<img key={image.lastModified} className='SelectedImage' src={window.URL.createObjectURL(image)} />));
 
 export default function SelectOrDragImage(props) {
   return (
@@ -89,4 +89,9 @@ SelectOrDragImage.propTypes = {
   shouldClearImages: PropTypes.bool,
   resetClearImages: PropTypes.func,
   fileManager: PropTypes.func,
+  setSelectedImages: PropTypes.func,
+  setNotCompliantImages: PropTypes.func,
+  setImages: PropTypes.func,
+  containerMessage: PropTypes.string,
+  images: PropTypes.array,
 };

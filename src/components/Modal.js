@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import '../styles/modal.css';
 
 export default function Modal(props) {
@@ -9,5 +10,10 @@ export default function Modal(props) {
         {props.children}
       </div>
     </div>
-  )
+  );
 }
+
+Modal.propTypes = {
+  styles: PropTypes.string,
+  children: PropTypes.node,
+};
