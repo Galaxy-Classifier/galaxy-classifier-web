@@ -1,11 +1,4 @@
-.GalaxyInfoContainer {
-  display: flex;
-  width: 100vw;
-  flex-direction: column;
-}
-
 .TitleContainer {
-  display: flex;
   height: 10%;
   align-items: center;
 }
@@ -15,7 +8,6 @@
 }
 
 .GalaxiesSection {
-  display: flex;
   width: 100%;
   height: 100%;
   justify-content: space-evenly;
@@ -28,7 +20,6 @@
 }
 
 .GalaxyItem {
-  display: flex;
   flex-direction: column;
   align-items: center;
   width: 25%;
@@ -36,7 +27,6 @@
 
 .GalaxyItemArticle {
   margin-top: 25px;
-  display: flex;
   flex-direction: column;
   align-items: center;
 }
@@ -46,6 +36,5 @@
 }
 
 .GalaxyPictureClass {
-  display: flex;
   justify-content: center;
 }
