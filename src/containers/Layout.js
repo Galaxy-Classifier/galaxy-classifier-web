@@ -12,20 +12,20 @@ export default function Layout({ children }) {
   return (
     <>
       <header>
-        <nav className="NavElements">
+        <nav className="Flex NavElements">
           <h1 className="NavTitle">SISTEMA CLASIFICADOR DE GALAXIAS</h1>
-          <section className="NavButtons">
+          <section className="Flex NavButtons">
             <Link styles='NavSpace' to='/galaxy-info' label='SOBRE LAS GALAXIAS' />
             <Link styles='NavSpace' to='/about' label='NOSOTROS' />
           </section>
         </nav>
-        <section className="InstitutionalImagesContainer">
+        <section className="Flex InstitutionalImagesContainer">
           <Picture classes='BannerImages' src={SEPSrc} />
           <Picture classes='BannerImages BannerSpacing' src={TECNMSrc} />
           <Picture classes='BannerImages BannerSpacing' src={ITCuliacanSRC} />
         </section>
       </header>
-      <div className="Container">
+      <div className="Flex Container">
         {children}
       </div>
     </>

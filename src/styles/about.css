@@ -1,0 +1,23 @@
+.StakeholdersContainer {
+  height: 80%;
+  justify-content: space-evenly;
+}
+
+.StakeholderItem {
+  width: 20%;
+  height: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.StakeholdersAdscriptionSection {
+  flex: 1;
+}
+
+.StakeholdersAdscriptionContainer {
+  margin-left: 1%;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+}

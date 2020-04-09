@@ -1,5 +1,4 @@
 .Container {
-  display: flex;
   height: 82vh
 ;}
 
@@ -9,7 +8,6 @@
 }
 
 .NavElements {
-  display: flex;
   height: 8vh;
   justify-content: space-between;
   align-items: center;
@@ -17,11 +15,9 @@
 
 .NavButtons {
   margin-right: 2em;
-  display: flex;
 }
 
 .InstitutionalImagesContainer {
-  display: flex;
   height: 10vh;
   align-items: center;
   background-color: #EFEFEF;

@@ -31,8 +31,8 @@ export default function Home() {
   if (selectedImages) containerMessage = selectedImagesMessage;
   return (
     <Layout>
-      <div className="HomeContainer">
-        <section className="SelectImages">
+      <div className="Flex">
+        <section className="Flex SelectImages">
           <SelectOrDragImage 
             setSelectedImages={setSelectedImages}
             containerMessage={containerMessage}
@@ -41,13 +41,13 @@ export default function Home() {
             images={images}
           />
         </section>
-        <section className="HomeSection">
-          <article className="HomeArticle">
+        <section className="Flex HomeSection">
+          <article className="Flex HomeArticle">
             <h1 style={{marginTop: '2%'}}>Acerca de este sitio</h1>
             <p style={{width: '95%', marginTop: '3%', textAlign: 'justify'}}>{initialMessage}</p>
-            <section className="HomeButtons">
-              <button className="BaseButton HomeButton" onClick={() => clearImageComponentState(setSelectedImages, setImages)}>LIMPIAR</button>
-              <button className="BaseButton HomeButton" onClick={() => checkOpenTermsAndConditions(images, shouldDisplayNotCompliantImages, setOpenTermsAndConditions, setNotCompliantImages)}>PREDECIR</button>
+            <section className="Flex HomeButtons">
+              <button className="Flex BaseButton HomeButton" onClick={() => clearImageComponentState(setSelectedImages, setImages)}>LIMPIAR</button>
+              <button className="Flex BaseButton HomeButton" onClick={() => checkOpenTermsAndConditions(images, shouldDisplayNotCompliantImages, setOpenTermsAndConditions, setNotCompliantImages)}>PREDECIR</button>
             </section>
           </article>
         </section>
