@@ -56,7 +56,7 @@ function checkFilesCompliance(files) {
   return filesAsArray;
 }
 
-const renderImages = (images) => images.map(image => (<img key={image.lastModified} className='SelectedImage' src={window.URL.createObjectURL(image)} />));
+const renderImages = (images) => images.map(image => (<img alt={image.name} key={image.lastModified} className='SelectedImage' src={window.URL.createObjectURL(image)} />));
 
 export default function SelectOrDragImage(props) {
   return (
