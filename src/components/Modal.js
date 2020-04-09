@@ -3,9 +3,9 @@ import PropTypes from 'prop-types';
 import '../styles/modal.css';
 
 export default function Modal(props) {
-  const classNames = `ModalContainer ${props.styles}`;
+  const classNames = `Flex ModalContainer ${props.styles}`;
   return (
-    <div className='Overlay'>
+    <div className='Flex Overlay'>
       <div className={classNames}>
         {props.children}
       </div>

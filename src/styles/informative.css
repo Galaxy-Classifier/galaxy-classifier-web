@@ -1,0 +1,18 @@
+.InformativeArticle {
+  flex-direction: column;
+}
+
+.InformativeArticleItems {
+  flex-direction: column;
+  height: 100%;
+}
+
+.InformativeArticleTitleContainer {
+  height: 10%;
+  width: 100vw;
+  align-items: center;
+}
+
+.InformativeArticleTitle {
+  margin-left: 1%;
+}

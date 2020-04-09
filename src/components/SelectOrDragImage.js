@@ -65,10 +65,10 @@ export default function SelectOrDragImage(props) {
       onDragLeave={(event) => removeHighlight(event)}
       onDragOver={(event) => addHighlight(event)}
       onDrop={(event) => getDraggedImages(event, props.setSelectedImages, props.setNotCompliantImages, props.setImages)}
-      className="SelectedImageContainer"
+      className="Flex SelectedImageContainer"
       id="Draggeable"
     >
-      <form id="SelectImageForm" className="SelectImageForm">
+      <form id="SelectImageForm" className="Flex SelectImageForm">
         <label>{props.containerMessage}</label>
         <input 
           onChange={(event) => getFileExplorerImages(event, props.setSelectedImages, props.setNotCompliantImages, props.setImages)} 
@@ -78,7 +78,7 @@ export default function SelectOrDragImage(props) {
         />
       </form>
       { props.images.length ? 
-        <div className="animated fadeIn SelectedImagesContainer">{renderImages(props.images)}</div> : 
+        <div className="animated fadeIn Flex SelectedImagesContainer">{renderImages(props.images)}</div> : 
         null 
       }
     </div>
