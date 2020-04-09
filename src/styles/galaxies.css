@@ -1,0 +1,51 @@
+.GalaxyInfoContainer {
+  display: flex;
+  width: 100vw;
+  flex-direction: column;
+}
+
+.TitleContainer {
+  display: flex;
+  height: 10%;
+  align-items: center;
+}
+
+.TitleElement {
+  margin-left: 1em;
+}
+
+.GalaxiesSection {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: space-evenly;
+  margin-top: 10px;
+}
+
+.GalaxyImage {
+  border-radius: 50%;
+  width: 40%;
+}
+
+.GalaxyItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 25%;
+}
+
+.GalaxyItemArticle {
+  margin-top: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.GalaxyItemList {
+  width: 100%;
+}
+
+.GalaxyPictureClass {
+  display: flex;
+  justify-content: center;
+}
