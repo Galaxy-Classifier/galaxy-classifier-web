@@ -19,6 +19,6 @@ export default function GalaxyItem(props) {
 
 GalaxyItem.propTypes = {
   src: PropTypes.string,
-  title: PropTypes.title,
+  title: PropTypes.string,
   info: PropTypes.array,
 };
