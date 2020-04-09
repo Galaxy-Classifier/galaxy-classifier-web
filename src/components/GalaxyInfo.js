@@ -12,7 +12,7 @@ export default function GalaxyInfo() {
           <h1 className='TitleElement'>TIPOS DE GALAXIAS</h1>
         </div>
         <section className='GalaxiesSection'>
-          {galaxies.map(galaxy => <GalaxyItem title={galaxy.title} src={galaxy.src} info={galaxy.info} />)}
+          {galaxies.map(galaxy => <GalaxyItem key={galaxy.title} title={galaxy.title} src={galaxy.src} info={galaxy.info} />)}
         </section>
       </div>
     </Layout>

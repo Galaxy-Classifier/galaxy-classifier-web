@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Picture from './Picture';
 import '../styles/galaxies.css';
 
@@ -15,3 +16,9 @@ export default function GalaxyItem(props) {
     </article>
   );
 }
+
+GalaxyItem.propTypes = {
+  src: PropTypes.string,
+  title: PropTypes.title,
+  info: PropTypes.array,
+};
