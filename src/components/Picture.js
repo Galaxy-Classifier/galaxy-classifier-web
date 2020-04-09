@@ -3,9 +3,9 @@ import PropTypes from 'prop-types';
 import '../styles/picture.css';
 
 export default function Picture(props) {
-  const { classes, src: { webpS, webpXS, webpM, webpL, pngS, pngXS, pngM, pngL, alt } } = props;
+  const { pictureElementClasses, classes, src: { webpS, webpXS, webpM, webpL, pngS, pngXS, pngM, pngL, alt } } = props;
   return (
-    <picture>
+    <picture className={pictureElementClasses}>
       <source type="image/webp" media="(min-width: 640px)" srcSet={webpXS} />
       <source type="image/webp" media="(min-width: 768px)" srcSet={webpS} />
       <source type="image/webp" media="(min-width: 1024px)" srcSet={webpM} />
@@ -31,4 +31,5 @@ Picture.propTypes = {
   alt: PropTypes.string,
   src: PropTypes.object,
   classes: PropTypes.string,
+  pictureElementClasses: PropTypes.string,
 };
