@@ -1,0 +1,39 @@
+{
+    "welcome": {
+        "title": "Bienvenido",
+        "content": [
+            { "id": 1, "message": "Estos términos de uso gobiernan el tratamiento que le damos a la información que se envía a través de ésta aplicación así como de la aplicación móvil." },
+            { "id": 2, "message": "Cuando envías una imágen, estás de acuerdo con éstos términos. De la misma manera, al enviar una imágen afirmas que cumples con los requisitos para poder utilizar el Sistema Clasificador de Galaxias así como te comprometes a cumplir con el Código de Conducta." },
+            { "id": 3, "message":"El Sistema Clasificador de Galaxias es un producto nacido del Tecnológico Nacional de México, Instituto Tecnológico de Culiacán." }
+        ]
+    },
+    "whoCanUse": {
+        "title": "¿Quién puede utilizar el Sistema Clasificador de Galaxias?",
+        "content": "Cualquier persona que tenga 10 años o más, cumplidos al momento de hacer uso del Sistema Clasificador de Galaxias."
+    },
+    "codeOfConduct": {
+        "title": "Código de conducta",
+        "listTitle": "Aceptas NO utilizar este sistema para:",
+        "content": [
+            { "id": 4, "message": "Lucrar con su uso." },
+            { "id": 5, "message": "Violar legislaciones activas en el país donde te encuentras." },
+            { "id": 6, "message": "Subir imágenes con contenido pornográfico, escandaloso, o que vulneren los derechos humanos. (https://www.un.org/en/universal-declaration-human-rights/)" },
+            { "id": 7, "message": "Subir imágenes que no sean de libre uso." }
+        ]
+    },
+    "whatDoWeStore": {
+        "title": "¿Qué información es la que guardamos?",
+        "content": "Nosotros solamente guardamos la imágen enviada y la plataforma desde donde se esta usando el servicio."
+    },
+    "whyDoWeStore": {
+        "title": "¿Porqué guardamos esa información?",
+        "content": [
+            { "id": 8, "message": "La plataforma se guarda para hacer estadística con el uso de la aplicación web y móvil." },
+            { "id": 9, "message": "La imágen se guarda para poder analizar el rendimiento del motor de predicción así como para en un futuro entrenarlo con las imágenes que se obtengan." }
+        ]
+    },
+    "contact": {
+        "title": "Contáctanos",
+        "content": "¿Tienes alguna duda? No dudes en contactarnos a éste correo electrónico: (inserte correo). No garantizamos responderte al instante, pero te responderemos en cuanto podamos."
+    }
+}
