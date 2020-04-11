@@ -11,22 +11,46 @@ nav {
 }
 
 a, button { text-decoration: none; color: white; font-weight: bold; font-size: 0.9em; }
-h1, h2 { font-size: 1.2em; }
+h1 { font-size: 1.2em; }
 h2 { font-size: 1.1em; }
-a, label, h1, button, h2 { margin: 0; font-family: 'Montserrat', sans-serif; }
+h3 { font-size: 1.0em; }
+a, label, h1, button, h2, h3 { margin: 0; font-family: 'Montserrat', sans-serif; }
 label { font-weight: bold; font-size: 1em; }
 input { border: none; background: transparent; outline: 0; margin-top: 10px; }
 p { margin: 0; font-family: 'Open Sans', sans-serif; }
 button { padding: 0; border: none; background: none; }
 button:hover { background-color: white; }
 
-.BaseButton {
+.Flex {
+  display: flex;
+}
+
+button {
+  display: flex;
   background-color: #1A237E;
   border-radius: 5px;
   justify-content: center;
   align-items: center;
 }
 
-.Flex {
-  display: flex;
+.MediumButton {
+  width: 15%;
+  height: 50%;
+}
+
+.SmallButton {
+  width: 20%;
+  height: 30%;
+}
+
+.MarginLeft {
+  margin-left: 1%;
+}
+
+.MarginRight {
+  margin-right: 1%;
+}
+
+.MarginTop {
+  margin-top: 1%;
 }

@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import Layout from './Layout';
 import SelectOrDragImage from '../components/SelectOrDragImage';
 import NotAcceptedImagesModal from '../components/NotAcceptedImages';
+import TermsAndConditionsModal from '../components/TermsAndConditions';
+import Button from '../components/Button';
 import '../styles/home.css';
 import { initialMessage, selectImagesMessage, selectedImagesMessage } from '../media/strings.json';
 
@@ -24,6 +26,7 @@ export default function Home() {
   const [selectedImages, setSelectedImages] = useState(false);
   const [shouldOpenTermsAndConditions, setOpenTermsAndConditions] = useState(false);
   const [shouldDisplayNotCompliantImages, setNotCompliantImages] = useState(false);
+  const [shouldDisplayLoadingScreen, setLoadingScreen] = useState(false); // eslint-disable-line
   const [images, setImages] = useState([]);
 
   let containerMessage = selectImagesMessage;
@@ -46,18 +49,25 @@ export default function Home() {
             <h1 style={{marginTop: '2%'}}>Acerca de este sitio</h1>
             <p style={{width: '95%', marginTop: '3%', textAlign: 'justify'}}>{initialMessage}</p>
             <section className="Flex HomeButtons">
-              <button className="Flex BaseButton HomeButton" onClick={() => clearImageComponentState(setSelectedImages, setImages)}>LIMPIAR</button>
-              <button className="Flex BaseButton HomeButton" onClick={() => checkOpenTermsAndConditions(images, shouldDisplayNotCompliantImages, setOpenTermsAndConditions, setNotCompliantImages)}>PREDECIR</button>
+              <Button classes='SmallButton' message='LIMPIAR' action={() => clearImageComponentState(setSelectedImages, setImages)} />
+              <Button classes='SmallButton' message='PREDECIR' action={() => checkOpenTermsAndConditions(images, shouldDisplayNotCompliantImages, setOpenTermsAndConditions, setNotCompliantImages)} />
             </section>
           </article>
         </section>
       </div>
       { shouldOpenTermsAndConditions ? 
-        <div>Terms and conditions modal!</div> : 
+        <TermsAndConditionsModal 
+          closeModal={setOpenTermsAndConditions}
+        /> : 
         null }
       { shouldDisplayNotCompliantImages ? 
         <NotAcceptedImagesModal closeModal={setNotCompliantImages} /> : 
         null }
+      {
+        shouldDisplayLoadingScreen ?
+          <div>Loading!</div> :
+          null
+      }
     </Layout>
   );
 }
