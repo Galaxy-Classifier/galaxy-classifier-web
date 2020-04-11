@@ -21,35 +21,30 @@
   overflow-y: scroll;
 }
 
+.ModalTitle {
+  width: 100%;
+  height: 15%;
+  align-items: center;
+}
+
+.ModalContent {
+  width: 100%;
+  height: 70%;
+}
+
+.ModalActions {
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+  height: 15%;
+}
+
 .BigModal {
   width: 70vw;
   height: 60vh;
 }
 
-.MediumModal {
-  width: 50vw;
-  height: 40vh;
-}
-
 .SmallModal {
   width: 40vw;
   height: 30vh;
-}
-
-.NotAcceptedImagesContent {
-  width: 100%;
-  height: 70%;
-}
-
-.NotAcceptedImagesButtons {
-  width: 100%;
-  height: 30%;
-  justify-content: flex-end;
-}
-
-.NotAcceptedImageButton {
-  width: 20%;
-  height: 40%;
-  margin-top: 3%;
-  margin-right: 3%;
 }
