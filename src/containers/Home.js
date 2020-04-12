@@ -14,7 +14,7 @@ export default function Home() {
   const [selectedImages, setSelectedImages] = useState(false);
   const [shouldOpenTermsAndConditions, setOpenTermsAndConditions] = useState(false);
   const [shouldDisplayNotCompliantImages, setNotCompliantImages] = useState(false);
-  const [shouldOpenErrorInRequestModal, setOpenErrorInRequestModal] = useState(false)
+  const [shouldOpenErrorInRequestModal, setOpenErrorInRequestModal] = useState(false);
   const [shouldDisplayLoadingScreen, setLoadingScreen] = useState(false); // eslint-disable-line
   const [images, setImages] = useState([]);
 
