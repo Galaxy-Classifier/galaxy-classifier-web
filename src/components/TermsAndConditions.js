@@ -7,7 +7,7 @@ import { welcome, whoCanUse, codeOfConduct, whatDoWeStore, whyDoWeStore, contact
 export default function TermsAndConditionsModal(props) {
   const actions = [
     <Button key='B1' action={() => props.closeModal(false)} classes='MediumButton MarginRight' message='REGRESAR' />,
-    <Button key='B2' classes='MediumButton MarginRight' message='CONTINUAR' />
+    <Button key='B2' action={() => props.fetchPrediction()} classes='MediumButton MarginRight' message='CONTINUAR' />
   ];
   return (
     <Modal 
@@ -52,4 +52,5 @@ export default function TermsAndConditionsModal(props) {
 
 TermsAndConditionsModal.propTypes = {
   closeModal: PropTypes.func,
+  fetchPrediction: PropTypes.func,
 };
