@@ -7,6 +7,7 @@ import {
 import About from './components/About';
 import GalaxyInfo from './components/GalaxyInfo';
 import Home from './containers/Home';
+import PredictionResults from './components/PredictionResults';
 
 export default function App() {
   return (
@@ -20,6 +21,9 @@ export default function App() {
         </Route>
         <Route path='/galaxy-info'>
           <GalaxyInfo />
+        </Route>
+        <Route path='/results'>
+          <PredictionResults />
         </Route>
       </Switch>
     </Router>
