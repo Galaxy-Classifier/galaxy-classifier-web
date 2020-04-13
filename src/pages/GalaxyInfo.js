@@ -1,7 +1,7 @@
 import React from 'react';
 import Layout from '../containers/Layout';
-import InformativePage from './InformativePage';
-import GalaxyItem from './GalaxyItem';
+import InformativePage from '../containers/InformativePage';
+import GalaxyItem from '../components/GalaxyItem';
 import { galaxies } from '../data/galaxy_items.json';
 import '../styles/galaxies.css';
 

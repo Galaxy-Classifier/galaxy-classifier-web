@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Button from './Button';
-import Modal from './Modal';
+import Button from '../components/Button';
+import Modal from '../containers/Modal';
 import { welcome, whoCanUse, codeOfConduct, whatDoWeStore, whyDoWeStore, contact } from '../data/terms_and_conditions.json';
 
 export default function TermsAndConditionsModal(props) {

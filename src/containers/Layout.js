@@ -2,9 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Link from '../components/Link';
 import Picture from '../components/Picture';
-import ITCuliacanSRC from '../media/itculiacanlogo.json';
-import TECNMSrc from '../media/tecnmlogo.json';
-import SEPSrc from '../media/seplogo.json';
+import ITCuliacanSRC from '../data/itculiacanlogo.json';
+import TECNMSrc from '../data/tecnmlogo.json';
+import SEPSrc from '../data/seplogo.json';
 import '../styles/layout.css';
 
 
