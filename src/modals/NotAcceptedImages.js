@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Button from './Button';
-import Modal from './Modal';
+import Button from '../components/Button';
+import Modal from '../containers/Modal';
 
 export default function NotAcceptedImagesModal(props) {
   const ContinueButton = <Button classes='MediumButton MarginRight' message='CONTINUAR' action={() => props.closeModal(false)} />;

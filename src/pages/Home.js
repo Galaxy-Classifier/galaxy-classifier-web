@@ -1,22 +1,24 @@
 import React, { useState } from 'react';
-import Layout from './Layout';
+import { useHistory } from 'react-router-dom';
+import Layout from '../containers/Layout';
 import SelectOrDragImage from '../components/SelectOrDragImage';
-import NotAcceptedImagesModal from '../components/NotAcceptedImages';
-import TermsAndConditionsModal from '../components/TermsAndConditions';
-import ErrorInRequestModal from '../components/Error';
-import { Link } from 'react-router-dom';
+import NotAcceptedImagesModal from '../modals/NotAcceptedImages';
+import TermsAndConditionsModal from '../modals/TermsAndConditions';
+import ErrorInRequestModal from '../modals/Error';
 import Loader from '../components/Loader';
 import Button from '../components/Button';
+import fetchPredictions from '../requests/fetchPredictions';
 import '../styles/home.css';
-import { initialMessage, selectImagesMessage, selectedImagesMessage } from '../media/strings.json';
+import { initialMessage, selectImagesMessage, selectedImagesMessage } from '../data/strings.json';
 
 export default function Home() {
   const [selectedImages, setSelectedImages] = useState(false);
   const [shouldOpenTermsAndConditions, setOpenTermsAndConditions] = useState(false);
   const [shouldDisplayNotCompliantImages, setNotCompliantImages] = useState(false);
   const [shouldOpenErrorInRequestModal, setOpenErrorInRequestModal] = useState(false);
-  const [shouldDisplayLoadingScreen, setLoadingScreen] = useState(false); // eslint-disable-line
+  const [shouldDisplayLoadingScreen, setLoadingScreen] = useState(false);
   const [images, setImages] = useState([]);
+  const browserHistory = useHistory();
 
   const clearImageState = () => {
     setSelectedImages(false);
@@ -37,12 +39,8 @@ export default function Home() {
     setOpenTermsAndConditions(false);
     setLoadingScreen(true);
     try {
-      return new Promise((resolve) => {
-        setTimeout(() => {
-          setLoadingScreen(false);
-          resolve(<Link to='/about' />);
-        }, 3000); 
-      });
+      const predictions = await fetchPredictions(images);
+      browserHistory.push('/results', { predictions });
     } catch (error) {
       setLoadingScreen(false);
       setOpenErrorInRequestModal(true);
