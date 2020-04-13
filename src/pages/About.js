@@ -1,6 +1,6 @@
 import React from 'react';
 import Layout from '../containers/Layout';
-import InformativePage from './InformativePage';
+import InformativePage from '../containers/InformativePage';
 import { stakeholders } from '../data/people.json';
 import '../styles/about.css';
 
