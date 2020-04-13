@@ -7,13 +7,13 @@ export default function Modal(props) {
   return (
     <div className='Flex Overlay'>
       <div className={classNames}>
-        <article className='Flex ModalTitle'>
+        <article className='Flex FullWidth ModalTitle'>
           <h1 className='MarginLeft'>{props.title}</h1>
         </article>
-        <div className='ModalContent Overflow'>
+        <div className='ModalContent FullWidth Overflow'>
           {props.children}
         </div>
-        <section className='Flex ModalActions'>
+        <section className='Flex ModalActions FullWidth'>
           {props.actions}
         </section>
       </div>

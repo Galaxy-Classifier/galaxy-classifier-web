@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
-import '../styles/link.css';
 
 export default function CustomLink(props) {
   const { to, label, styles } = props;

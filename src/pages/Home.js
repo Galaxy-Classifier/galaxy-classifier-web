@@ -63,7 +63,7 @@ export default function Home() {
           />
         </section>
         <section className="Flex HomeSection">
-          <article className="Flex HomeArticle">
+          <article className="Flex FullWidth HomeArticle">
             <h1 style={{marginTop: '2%'}}>Acerca de este sitio</h1>
             <p style={{width: '95%', marginTop: '3%', textAlign: 'justify'}}>{initialMessage}</p>
             <section className="Flex HomeButtons">

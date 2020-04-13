@@ -3,8 +3,8 @@
 html, body { min-height: 100vh; margin: 0; }
 
 header {
-  background-color: lime;
   display: flex;
+  background-color: #EFEFEF;
   flex-direction: column;
 }
 
@@ -18,13 +18,22 @@ h2 { font-size: 1.1em; }
 h3 { font-size: 1.0em; }
 a, label, h1, button, h2, h3 { margin: 0; font-family: 'Montserrat', sans-serif; }
 label { font-weight: bold; font-size: 1em; }
-input { border: none; background: transparent; outline: 0; margin-top: 10px; }
+input { border: none; background: transparent; outline: 0; margin-top: 1%; }
 p { margin: 0; font-family: 'Open Sans', sans-serif; }
 button { padding: 0; border: none; background: none; }
 button:hover { background-color: white; }
 
 .Flex {
   display: flex;
+}
+
+.HorizontalAndVerticalAlign {
+  justify-content: center;
+  align-items: center;
+}
+
+.FullWidth {
+  width: 100%;
 }
 
 button {

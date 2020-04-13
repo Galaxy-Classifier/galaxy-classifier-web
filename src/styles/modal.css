@@ -11,20 +11,17 @@
 }
 
 .ModalTitle {
-  width: 100%;
   height: 15%;
   align-items: center;
 }
 
 .ModalContent {
-  width: 100%;
   height: 70%;
 }
 
 .ModalActions {
   justify-content: flex-end;
   align-items: center;
-  width: 100%;
   height: 15%;
 }
 

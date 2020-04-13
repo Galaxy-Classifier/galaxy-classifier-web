@@ -4,17 +4,12 @@
 
 .NavTitle {
   color: white;
-  margin-left: 1em;
 }
 
 .NavElements {
   height: 8vh;
   justify-content: space-between;
   align-items: center;
-}
-
-.NavButtons {
-  margin-right: 2em;
 }
 
 .InstitutionalImagesContainer {

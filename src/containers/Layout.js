@@ -13,16 +13,16 @@ export default function Layout({ children }) {
     <>
       <header>
         <nav className="Flex NavElements">
-          <h1 className="NavTitle">SISTEMA CLASIFICADOR DE GALAXIAS</h1>
-          <section className="Flex NavButtons">
-            <Link styles='NavSpace' to='/galaxy-info' label='SOBRE LAS GALAXIAS' />
-            <Link styles='NavSpace' to='/about' label='NOSOTROS' />
+          <h1 className="MarginLeft NavTitle">SISTEMA CLASIFICADOR DE GALAXIAS</h1>
+          <section className="Flex MarginRight">
+            <Link styles='MarginRight' to='/galaxy-info' label='SOBRE LAS GALAXIAS' />
+            <Link styles='MarginRight' to='/about' label='NOSOTROS' />
           </section>
         </nav>
-        <section className="Flex InstitutionalImagesContainer">
+        <section className="MarginLeft Flex InstitutionalImagesContainer">
           <Picture classes='BannerImages' src={SEPSrc} />
-          <Picture classes='BannerImages BannerSpacing' src={TECNMSrc} />
-          <Picture classes='BannerImages BannerSpacing' src={ITCuliacanSRC} />
+          <Picture classes='MarginLeft BannerImages' src={TECNMSrc} />
+          <Picture classes='MarginLeft BannerImages' src={ITCuliacanSRC} />
         </section>
       </header>
       <div className="Flex Container">

@@ -13,7 +13,7 @@ export default function About() {
             const { name, lastName, role, email, id } = stakeholder;
             const emailRef = `mailto:${email}`;
             return (
-              <article key={id} className='Flex StakeholderItem'>
+              <article key={id} className='Flex HorizontalAndVerticalAlign StakeholderItem'>
                 <h1 style={{textAlign: 'center', marginBottom: '1%'}}>{name} {lastName}</h1>
                 <p>{role}</p>
                 <a style={{color: 'black'}} href={emailRef}><p>{email}</p></a>
@@ -22,7 +22,7 @@ export default function About() {
           })}
         </section>
         <section className='Flex StakeholdersAdscriptionSection'>
-          <article className='Flex StakeholdersAdscriptionContainer'>
+          <article className='Flex FullWidth StakeholdersAdscriptionContainer'>
             <h1>Tecnológico Nacional de México</h1>
             <h2>Instituto Tecnológico de Culiacán</h2>
             <h2>División de Estudios de Posgrado e Investigación</h2>

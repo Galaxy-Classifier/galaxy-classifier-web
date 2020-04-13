@@ -9,7 +9,7 @@ export default function GalaxyItem(props) {
       <Picture pictureElementClasses='Flex GalaxyPictureClass' classes='GalaxyImage' src={props.src} />
       <article className='Flex GalaxyItemArticle'>
         <h1>{props.title}</h1>
-        <ul className='GalaxyItemList'>
+        <ul className='FullWidth'>
           {props.info.map((info) => <li key={info.id}><p>{info.text}</p></li>)}
         </ul>
       </article>

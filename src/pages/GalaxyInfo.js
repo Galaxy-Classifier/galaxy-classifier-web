@@ -9,7 +9,7 @@ export default function GalaxyInfo() {
   return (
     <Layout>
       <InformativePage title='TIPOS DE GALAXIAS'>
-        <section className='Flex GalaxiesSection'>
+        <section className='Flex FullWidth GalaxiesSection'>
           {galaxies.map(galaxy => <GalaxyItem key={galaxy.title} title={galaxy.title} src={galaxy.src} info={galaxy.info} />)}
         </section>
       </InformativePage>

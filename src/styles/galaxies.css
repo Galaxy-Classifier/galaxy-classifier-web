@@ -3,12 +3,7 @@
   align-items: center;
 }
 
-.TitleElement {
-  margin-left: 1em;
-}
-
 .GalaxiesSection {
-  width: 100%;
   height: 100%;
   justify-content: space-evenly;
   margin-top: 10px;
@@ -29,10 +24,6 @@
   margin-top: 25px;
   flex-direction: column;
   align-items: center;
-}
-
-.GalaxyItemList {
-  width: 100%;
 }
 
 .GalaxyPictureClass {
